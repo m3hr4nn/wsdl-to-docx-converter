@@ -43,7 +43,7 @@ The generated Word document includes:
 
 ## Live Demo
 
-Simply open `index.html` in your browser to use the application.
+Simply open https://m3hr4nn.github.io/wsdl-to-docx-converter/ in your browser to use the application.
 
 ## License
 
