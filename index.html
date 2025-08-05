@@ -8,37 +8,41 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-        <h1>WSDL to DOCX Converter</h1>
-        <p style="color: #666; margin-bottom: 30px;">Upload a WSDL file to generate a structured Word document</p>
+        <header>
+            <h1>WSDL to DOCX Converter</h1>
+            <p class="subtitle">Upload a WSDL file to generate a structured Word document</p>
+        </header>
 
-        <div class="upload-area" id="uploadArea">
-            <div class="upload-icon">📄</div>
-            <div class="upload-text">Drag & drop your WSDL file here</div>
-            <div style="color: #999;">or</div>
-            <button class="btn" onclick="document.getElementById('fileInput').click()">Choose File</button>
-            <input type="file" id="fileInput" class="file-input" accept=".wsdl,.xml" />
-        </div>
+        <main>
+            <div class="upload-area" id="uploadArea">
+                <div class="upload-icon">📄</div>
+                <div class="upload-text">Drag & drop your WSDL file here</div>
+                <div class="upload-subtext">or</div>
+                <button class="btn" onclick="document.getElementById('fileInput').click()">Choose File</button>
+                <input type="file" id="fileInput" class="file-input" accept=".wsdl,.xml" />
+            </div>
 
-        <div id="fileInfo" class="file-info" style="display: none;">
-            <div class="file-name" id="fileName"></div>
-            <div class="file-size" id="fileSize"></div>
-        </div>
+            <div id="fileInfo" class="file-info" style="display: none;">
+                <div class="file-name" id="fileName"></div>
+                <div class="file-size" id="fileSize"></div>
+            </div>
 
-        <div id="status" class="status" style="display: none;"></div>
+            <div id="status" class="status" style="display: none;"></div>
 
-        <div id="preview" class="preview" style="display: none;">
-            <h3>WSDL Structure Preview:</h3>
-            <div id="previewContent"></div>
-        </div>
+            <div id="preview" class="preview-section" style="display: none;">
+                <h3 class="preview-title">WSDL Structure Preview:</h3>
+                <div class="preview-content" id="previewContent"></div>
+            </div>
 
-        <button id="generateBtn" class="btn" onclick="generateDocument()" disabled>
-            Generate DOCX Document
-        </button>
-    </div>
-    <div>
+            <button id="generateBtn" class="process-btn" onclick="generateDocument()" disabled>
+                Generate DOCX Document
+            </button>
+        </main>
+
         <footer>
             <div class="features">
                 <h3>Features</h3>
